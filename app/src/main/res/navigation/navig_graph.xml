@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navig_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.our_trpp_project.UI.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_student1"
+            app:destination="@id/student1" />
+        <action
+            android:id="@+id/action_startFragment_to_teacher1"
+            app:destination="@id/teacher1" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentRegister1"
+        android:name="com.example.our_trpp_project.UI.StudentRegister1"
+        android:label="student_register1"
+        tools:layout="@layout/student_register1" >
+        <action
+            android:id="@+id/action_studentRegister1_to_studentRegister2"
+            app:destination="@id/studentRegister2" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentRegister2"
+        android:name="com.example.our_trpp_project.UI.StudentRegister2"
+        android:label="student_register2"
+        tools:layout="@layout/student_register2" >
+        <action
+            android:id="@+id/action_studentRegister2_to_studentMain1"
+            app:destination="@id/studentMain1" />
+    </fragment>
+    <fragment
+        android:id="@+id/student1"
+        android:name="com.example.our_trpp_project.UI.Student1"
+        android:label="fragment_student1"
+        tools:layout="@layout/fragment_student1" >
+        <action
+            android:id="@+id/action_student1_to_studentRegister1"
+            app:destination="@id/studentRegister1" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacher1"
+        android:name="com.example.our_trpp_project.UI.Teacher1"
+        android:label="teacher_1"
+        tools:layout="@layout/teacher_1" >
+        <action
+            android:id="@+id/action_teacher1_to_teacherRegister1"
+            app:destination="@id/teacherRegister1" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherRegister1"
+        android:name="com.example.our_trpp_project.UI.TeacherRegister1"
+        android:label="teacher_register1"
+        tools:layout="@layout/teacher_register1" >
+        <action
+            android:id="@+id/action_teacherRegister1_to_teacherRegister2"
+            app:destination="@id/teacherRegister2" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherRegister2"
+        android:name="com.example.our_trpp_project.UI.TeacherRegister2"
+        android:label="teacher_register2"
+        tools:layout="@layout/teacher_register2" >
+        <action
+            android:id="@+id/action_teacherRegister2_to_teacherRegister3"
+            app:destination="@id/teacherRegister3" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherRegister3"
+        android:name="com.example.our_trpp_project.UI.TeacherRegister3"
+        android:label="teacher_register3"
+        tools:layout="@layout/teacher_register3" />
+    <fragment
+        android:id="@+id/studentMain1"
+        android:name="com.example.our_trpp_project.UI.StudentMain1"
+        android:label="fragment_student_main1"
+        tools:layout="@layout/fragment_student_main1" >
+        <action
+            android:id="@+id/action_studentMain1_to_studentCabinet"
+            app:destination="@id/studentCabinet" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentCabinet"
+        android:name="com.example.our_trpp_project.StudentCabinet"
+        android:label="fragment_student_cabinet"
+        tools:layout="@layout/fragment_student_cabinet" />
+</navigation>
